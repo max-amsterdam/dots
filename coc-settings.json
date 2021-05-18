@@ -1,0 +1,27 @@
+{
+	"languageserver": {
+		"golang" : {
+			"command": "gopls",
+			"rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+			"filetypes": ["go"]
+		},
+		"ccls": {
+		  "command": "ccls",
+		  "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+		  "rootPatterns": [".ccls-root", "compile_commands.json"],
+		  "initializationOptions": {
+			"cache": {
+			  "directory": ".ccls-cache"
+			},
+			"client": {
+			  "snippetSupport": true
+			},
+			"highlight": { "lsRanges" : true}
+		  }
+		}
+	},
+	"python.jediEnabled": false,
+	"python.linting.pep8Enabled": true,
+	"python.linting.pep8Args": ["--ignore=E501"],
+	"yaml.format.enable": true
+}
